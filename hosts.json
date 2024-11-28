@@ -1,0 +1,27 @@
+{
+  "fsn1-speed.hetzner.com": {
+    "sm": "https://fsn1-speed.hetzner.com/100MB.bin",
+    "md": "https://fsn1-speed.hetzner.com/1GB.bin",
+    "lg": "https://fsn1-speed.hetzner.com/10GB.bin"
+  },
+  "hel.icmp.hetzner.com": {
+    "sm": "http://hel.icmp.hetzner.com/100MB.bin",
+    "md": "http://hel.icmp.hetzner.com/1GB.bin",
+    "lg": "http://hel.icmp.hetzner.com/10GB.bin"
+  },
+  "nbg1-speed.hetzner.com": {
+    "sm": "https://nbg1-speed.hetzner.com/100MB.bin",
+    "md": "https://nbg1-speed.hetzner.com/1GB.bin",
+    "lg": "https://nbg1-speed.hetzner.com/10GB.bin"
+  },
+  "ash-speed.hetzner.com": {
+    "sm": "https://ash-speed.hetzner.com/100MB.bin",
+    "md": "https://ash-speed.hetzner.com/1GB.bin",
+    "lg": "https://ash-speed.hetzner.com/10GB.bin"
+  },
+  "hil-speed.hetzner.com": {
+    "sm": "https://hil-speed.hetzner.com/100MB.bin",
+    "md": "https://hil-speed.hetzner.com/1GB.bin",
+    "lg": "https://hil-speed.hetzner.com/10GB.bin"
+  }
+}
