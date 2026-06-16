@@ -3,7 +3,7 @@
 set -euo pipefail
 
 # ─── Color Definitions ────────────────────────────────────────────────────────
-if [[ -t 1 ]]; then
+if [[ -t 1 ]] && command -v tput &>/dev/null; then
     readonly BOLD=$(tput bold)
     readonly RED=$(tput setaf 1)
     readonly GREEN=$(tput setaf 2)
@@ -19,8 +19,9 @@ else
 fi
 
 # ─── Config ───────────────────────────────────────────────────────────────────
+readonly SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
 readonly SCRIPT_NAME=$(basename "$0")
-readonly CONFIG_FILE="hosts.json"
+readonly CONFIG_FILE="${CONFIG_DIR:-$SCRIPT_DIR}/hosts.json"
 readonly PING_COUNT=10
 
 # ─── Help ─────────────────────────────────────────────────────────────────────
@@ -47,7 +48,7 @@ EOF
 # ─── Dependency Check ─────────────────────────────────────────────────────────
 check_deps() {
     local missing=()
-    for cmd in jq curl bc ping tput; do
+    for cmd in jq curl bc ping; do
         if ! command -v "$cmd" &>/dev/null; then
             missing+=("$cmd")
         fi

@@ -39,10 +39,35 @@ apk add curl jq bc
 
 ## Installation
 
+### Direct
+
 ```bash
 git clone https://github.com/<your-username>/hetzner-speedtest-bash.git
 cd hetzner-speedtest-bash
 chmod +x hetzner-speedtest.sh
+```
+
+### Nix
+
+```bash
+# Run directly (no install needed)
+nix run github:<your-username>/hetzner-speedtest-bash -- --size small
+
+# Or enter a dev shell with dependencies & linters
+nix develop github:<your-username>/hetzner-speedtest-bash
+```
+
+### Docker
+
+```bash
+# Build
+docker build -t hetzner-speedtest .
+
+# Run
+docker run --rm hetzner-speedtest --size small
+
+# Interactive mode requires -it
+docker run --rm -it hetzner-speedtest
 ```
 
 ## Usage
